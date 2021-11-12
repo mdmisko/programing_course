@@ -1,0 +1,91 @@
+HTML tags
+
+-----------------------------------
+
+1. Input i eventi:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mihalov market</title>
+    <style type="text/css">
+        body {
+            background-color:yellowgreen;
+        }
+        h2 {
+            font-family: cursive;
+        }
+        label {
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+    
+    <script>
+
+        // function countChars(str) {
+
+        //     var count = 0;
+
+        //     for(var i = 0; i < str.length; i++){
+        //         if( str[i] != " " ) {
+        //             count++;
+        //         }
+        //     }
+
+        //     return count
+
+        // }
+
+        // function saberi(sabirak1, sabirak2) {
+        //     return parseInt(sabirak1) + parseInt(sabirak2)
+        // }
+            function ponoviti(n, text){
+
+                var str = "";
+
+                for ( var i = 0; i < n; i++) {
+                    str= str + text + "\n"
+                }
+
+                return str
+            }
+      
+
+        function fillTheResult() {
+
+            var putaInput = document.getElementById("puta");
+            var textInput = document.getElementById('text')
+         
+
+            var h1 = document.getElementById("rezultat");
+            
+            h1.innerText = ponoviti(putaInput.value, textInput.value);
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- <a href="http://google.com" target="blank">
+        <img src="imgs/welcome.png" alt="welcome" width="200x">
+    </a> -->
+
+    <label>
+        Koliko puta?
+        <input type="text" id="puta"  />
+    </label>
+
+    <label>
+        Vas tekst 
+        <input type="text" id="text"  />
+    <label>
+    
+    <button type="button" onclick="fillTheResult()">
+        Ponovi                                                                   
+    </button>
+    
+    <h1 id="rezultat"></h1>
+    
+</body>
+

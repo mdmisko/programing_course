@@ -1,0 +1,51 @@
+HTML tags
+
+-----------------------------------
+
+1. Input i eventi:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mihalov market</title>
+    <style type="text/css">
+        body {
+            background-color: yellowgreen;
+        }
+        h2 {
+            font-family: cursive;
+        }
+    </style>
+    <script>
+
+        function countChars(str) {
+
+            return str.length
+
+        }
+
+        function fillTheResult() {
+            var input = document.getElementById("textInput");
+            var h1 = document.getElementById("rezultat");
+            
+            h1.innerText = countChars(input.value);
+        }
+
+    </script>
+</head>
+
+<body>
+    <!-- <a href="http://google.com" target="blank">
+        <img src="imgs/welcome.png" alt="welcome" width="200x">
+    </a> -->
+
+    <input type="text" id="textInput" onkeyup="fillTheResult()" />
+    
+    <!-- <button type="button" onclick="fillTheResult()">
+        Izbroji slova                                                                    
+    </button> -->
+
+    <h1 id="rezultat"></h1>
+
+</body>
+

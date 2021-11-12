@@ -1,0 +1,55 @@
+HTML tags
+
+-----------------------------------
+
+1. JS i CSS u HTMLu:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mihalov market</title>
+    <style type="text/css">
+        body {
+            background-color: turquoise;
+        }
+        button {
+            background-color: transparent;
+            border-width: 0;
+            cursor: pointer;
+            display: inline-block;
+        }
+        button img {
+            vertical-align: middle;
+        }
+        button span {
+            vertical-align: middle;
+        }
+    </style>
+    <script>
+        function likeMe() {
+            
+            var countSpan = document.getElementById("count");
+            var strVal = countSpan.innerText;
+            var inVal = parseInt(strVal) + 1;
+
+            countSpan.innerText = inVal;
+            
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <a href="http://google.com" target="blank">
+        <img src="imgs/welcome.png" alt="welcome" width="200x">
+    </a> -->
+    
+    <button type="button" onclick="likeMe()">
+        <img src="imgs/like.png" alt="welcome" width="30px">
+        <span id="count">0</span>
+    </button>
+    
+    <h6>Chek our products</h6>
+
+
+
+</body>

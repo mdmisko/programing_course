@@ -1,0 +1,38 @@
+Terminal commands
+
+-----------------------------------
+
+1. Komade koje smo naucili:
+
+cd /mnt/c/Users/38163/Documents/Mihajlo
+mkdir sajt
+cd sajt
+touch index.html
+rm index.html
+cd ..
+rm -rf sajt
+
+----------------------------------
+
+2. Kako napraviti skriptu
+
+* Napraviti fajl sa extenzijom .sh
+* Na pocetku fajla staviti #!/bin/bash
+* U nastavku uneti zeljene komande 
+
+----------------------------------
+
+3. Kako pokrenuti skriptu:
+
+cd /mnt/c/Users/38163/Documents/Mihajlo/skripte
+./makesajt.sh
+
+---------------------------------
+
+4. Korisceni programi
+
+* File Explorer
+* Visual Studio Code
+* Ubuntu terminal
+
+---------------------------------
