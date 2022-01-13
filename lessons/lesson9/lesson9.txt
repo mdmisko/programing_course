@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mihalov market</title>
+    </head>
+    <body>
+        
+        <h1>Page</h1>
+
+        <span id="rezultat">/</span>
+        <button onclick="increment()" >INCREMENT</button>
+
+        <script>
+            var count = 0;
+
+            function increment(){
+              count++;
+              
+              document.getElementById("rezultat").innerText = count
+
+            }
+            
+            function uvecajZa(num){
+              count = count + num; 
+            
+            }
+            
+            function saberi(num2,num3){
+              return num2 + num3
+            }
+
+            </script>
+    </body>
+</html>

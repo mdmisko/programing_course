@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mihalov market</title>
+    <style type="text/css">
+        body {
+            background-color:rgba(134, 82, 255, 0.473);
+        }
+        h2 {
+            font-family: cursive;
+        }
+        label {
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+    
+</head>
+
+<body>
+  
+    <h1 >
+        Check console
+    </h1>
+
+    <script>
+
+        //             0, 1, 2, 3
+        var prices = [10, 2, 6, 1];
+        var currency = "$";
+        var max = Number.NEGATIVE_INFINITY;
+        var sum = 0;
+        var min = Number.POSITIVE_INFINITY;
+
+        for(var i = 0; i < prices.length; i++){
+        
+        if(max < prices[i]) {
+            max = prices[i];  
+        }
+
+        }
+
+        for(var i = 0; i < prices.length; i++){
+        sum = sum + prices[i];   
+        }
+
+
+        for(price of prices) {
+        
+        if(min > price) {
+            min = price;  
+        }
+        
+        } 
+
+
+        console.log("zbir", sum)
+        console.log("maksimalni", max)
+        console.log("minimalni", min)
+        
+
+    </script>
+</body>

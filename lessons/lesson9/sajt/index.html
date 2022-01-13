@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mihalov market</title>
+    <style type="text/css">
+        body {
+            background-color:rgba(134, 82, 255, 0.473);
+        }
+        h2 {
+            font-family: cursive;
+        }
+        label {
+            display: block;
+            margin-bottom: 20px;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- <a href="http://google.com" target="blank">
+        <img src="imgs/welcome.png" alt="welcome" width="200x">
+    </a> -->
+    <h2>Slicice</h2>
+    <label>
+        $1
+        <input type="checkbox" value="1" onchange="fillTheResult()"/>
+    </label>
+    <label>
+        $4
+        <input type="checkbox" value="4" onchange="fillTheResult()"/>
+    </label>
+    <label>
+        $6
+        <input type="checkbox" value="6" onchange="fillTheResult()"/>
+    </label>
+    <label>
+        $7
+        <input type="checkbox" value="7" onchange="fillTheResult()"/>
+    </label>
+    <label>
+        $8
+        <input type="checkbox" value="8" onchange="fillTheResult()"/>
+    </label>
+    <label>
+        $10
+        <input type="checkbox" value="10" onchange="fillTheResult()"/>
+    </label>
+    
+    <hr>
+    <h3 >
+        $<span id="rezultat">0</span> x
+    </h3>
+    <div>
+        <button onclick="smanjiKolicnu()">-</button>
+        <span id="kolicina">1</span>
+        <button onclick="povecajKolicnu()">+</button>
+    </div>
+    <hr>
+    <h1 >
+        $<span id="konacan">0</span> 
+    </h1>
+
+    <script>
+
+        
+
+        function fillTheResult() {
+            var rezultat = document.getElementById('rezultat');
+            var checkboxes = document.getElementsByTagName('input');
+            var sum = 0 
+            // console.log(checkboxes)
+
+            for ( const checkbox of checkboxes) {
+
+                if(checkbox.checked) {
+                    sum = sum + parseInt(checkbox.value)
+                }
+
+            }
+
+
+            // for ( var i = 0; i < checkboxes.length; i++ ) {
+
+            //     if(checkboxes[i].checked) {
+            //       sum = sum + parseInt(checkboxes[i].value)
+                     
+            //     }
+                
+            // }
+
+            rezultat.innerText = sum;
+
+        }
+
+        function mnozi(kolicina) {
+            var konacanSpan  = document.getElementById('konacan');
+            var rezultatSpan = document.getElementById('rezultat');
+            konacanSpan.innerText = parseInt(rezultatSpan.innerText) * kolicina;
+        }
+
+        var kolicinaSpan = document.getElementById('kolicina');
+
+        function uzmiKolicinu() {
+            return parseInt(kolicinaSpan.innerText)
+        }
+
+        function postaviKolicinu(kolicina){
+            kolicinaSpan.innerText = kolicina;
+        }
+
+        function smanjiKolicnu(){            
+            var kolicina = uzmiKolicinu();
+
+            if (kolicina > 1){
+                postaviKolicinu(kolicina - 1);
+                mnozi(kolicina - 1);
+            }
+        
+        }
+
+        function povecajKolicnu(){
+            var kolicina = uzmiKolicinu();
+            postaviKolicinu(kolicina + 1)
+            mnozi(kolicina + 1);
+        }
+            
+
+    </script>
+</body>
